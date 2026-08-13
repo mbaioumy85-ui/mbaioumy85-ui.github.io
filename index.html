@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>MB Fashion | متجر الملابس</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Tahoma, sans-serif;
+    }
+
+    body {
+      background: #f8f8f8;
+      color: #222;
+    }
+
+    /* Header */
+    header {
+      background: #111;
+      color: white;
+      padding: 18px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-right: 25px;
+      font-size: 16px;
+    }
+
+    nav a:hover {
+      color: #d4af37;
+    }
+
+    /* Hero */
+    .hero {
+      min-height: 70vh;
+      background:
+        linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+        url("https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=1600&q=80")
+        center/cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      padding: 30px;
+    }
+
+    .hero h1 {
+      font-size: 55px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 21px;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #d4af37;
+      color: #111;
+      padding: 14px 30px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: .3s;
+    }
+
+    .btn:hover {
+      background: white;
+    }
+
+    /* Sections */
+    section {
+      padding: 60px 7%;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .section-title h2 {
+      font-size: 35px;
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      color: #777;
+    }
+
+    /* Products */
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 25px;
+    }
+
+    .product {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,.08);
+      transition: .3s;
+    }
+
+    .product:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 8px 25px rgba(0,0,0,.15);
+    }
+
+    .product img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+    }
+
+    .product-info {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .product-info h3 {
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+
+    .price {
+      color: #b08b20;
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .order-btn {
+      display: block;
+      background: #111;
+      color: white;
+      padding: 11px;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+
+    .order-btn:hover {
+      background: #d4af37;
+      color: #111;
+    }
+
+    /* About */
+    .about {
+      background: #111;
+      color: white;
+      text-align: center;
+    }
+
+    .about p {
+      max-width: 800px;
+      margin: auto;
+      line-height: 2;
+      color: #ddd;
+    }
+
+    /* Contact */
+    .contact {
+      text-align: center;
+    }
+
+    .contact-box {
+      max-width: 600px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,.08);
+    }
+
+    .contact-box p {
+      margin: 15px 0;
+      font-size: 18px;
+    }
+
+    /* Footer */
+    footer {
+      background: #111;
+      color: #aaa;
+      text-align: center;
+      padding: 25px;
+    }
+
+    /* Mobile */
+    @media (max-width: 700px) {
+
+      header {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      nav a {
+        margin: 0 8px;
+        font-size: 14px;
+      }
+
+      .hero h1 {
+        font-size: 38px;
+      }
+
+      .hero p {
+        font-size: 17px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">MB FASHION</div>
+
+    <nav>
+      <a href="#home">الرئيسية</a>
+      <a href="#products">المنتجات</a>
+      <a href="#about">عنّا</a>
+      <a href="#contact">تواصل معنا</a>
+    </nav>
+  </header>
+
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div>
+      <h1>MB FASHION</h1>
+
+      <p>
+        أناقة مختلفة تبدأ من هنا
+      </p>
+
+      <a href="#products" class="btn">
+        اكتشف المجموعة
+      </a>
+    </div>
+  </section>
+
+
+  <!-- Products -->
+  <section id="products">
+
+    <div class="section-title">
+      <h2>أحدث المنتجات</h2>
+      <p>اختار القطعة التي تناسبك</p>
+    </div>
+
+    <div class="products">
+
+
+      <!-- Product 1 -->
+      <div class="product">
+
+        <img
+          src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=700&q=80"
+          alt="تيشيرت أبيض">
+
+        <div class="product-info">
+
+          <h3>تيشيرت كلاسيك</h3>
+
+          <div class="price">
+            450 جنيه
+          </div>
+
+          <a
+            class="order-btn"
+            href="https://wa.me/201000000000?text=مرحباً، أريد طلب تيشيرت كلاسيك"
+            target="_blank">
+            اطلب الآن
+          </a>
+
+        </div>
+      </div>
+
+
+      <!-- Product 2 -->
+      <div class="product">
+
+        <img
+          src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=700&q=80"
+          alt="قميص">
+
+        <div class="product-info">
+
+          <h3>قميص أنيق</h3>
+
+          <div class="price">
+            650 جنيه
+          </div>
+
+          <a
+            class="order-btn"
+            href="https://wa.me/201000000000?text=مرحباً، أريد طلب قميص أنيق"
+            target="_blank">
+            اطلب الآن
+          </a>
+
+        </div>
+      </div>
+
+
+      <!-- Product 3 -->
+      <div class="product">
+
+        <img
+          src="https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=700&q=80"
+          alt="بنطلون">
+
+        <div class="product-info">
+
+          <h3>بنطلون Premium</h3>
+
+          <div class="price">
+            750 جنيه
+          </div>
+
+          <a
+            class="order-btn"
+            href="https://wa.me/201000000000?text=مرحباً، أريد طلب بنطلون Premium"
+            target="_blank">
+            اطلب الآن
+          </a>
+
+        </div>
+      </div>
+
+
+      <!-- Product 4 -->
+      <div class="product">
+
+        <img
+          src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=700&q=80"
+          alt="جاكيت">
+
+        <div class="product-info">
+
+          <h3>جاكيت فاخر</h3>
+
+          <div class="price">
+            1,200 جنيه
+          </div>
+
+          <a
+            class="order-btn"
+            href="https://wa.me/201000000000?text=مرحباً، أريد طلب جاكيت فاخر"
+            target="_blank">
+            اطلب الآن
+          </a>
+
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+
+  <!-- About -->
+  <section class="about" id="about">
+
+    <div class="section-title">
+      <h2>عن MB FASHION</h2>
+    </div>
+
+    <p>
+      نقدم مجموعة مختارة من الملابس العصرية بجودة عالية
+      وتصميمات تناسب مختلف الأذواق.
+      هدفنا أن نقدم لك تجربة تسوق سهلة،
+      مع منتجات تجمع بين الأناقة والجودة والسعر المناسب.
+    </p>
+
+  </section>
+
+
+  <!-- Contact -->
+  <section class="contact" id="contact">
+
+    <div class="section-title">
+      <h2>تواصل معنا</h2>
+      <p>نحن سعداء بتواصلك معنا</p>
+    </div>
+
+    <div class="contact-box">
+
+      <p>📱 واتساب: 01000000000</p>
+
+      <p>📧 Email: mbaioumy@gmail.com</p>
+
+      <a
+        class="btn"
+        href="https://wa.me/201000000000"
+        target="_blank">
+        تواصل عبر واتساب
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- Footer -->
+  <footer>
+
+    <p>
+      © 2026 MB FASHION - جميع الحقوق محفوظة
+    </p>
+
+  </footer>
+
+</body>
+</html>
